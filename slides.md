@@ -49,6 +49,13 @@ Piattaforma per gioco competitivo da 2 giocatori
 Mockup con figma:
 
 ![h:300](./images/Landing_Responsive.png)
+
+---
+
+## Mockup
+
+Mockup con figma:
+
 ![h:200](./images/Landing.png)
 
 ---
