@@ -48,8 +48,8 @@ Piattaforma per gioco competitivo da 2 giocatori
 
 Mockup con figma:
 
-![landing](./images/Landing.png)
-![landing resp](./images/Landing_Responsive.png)
+![h:300](./images/Landing.png)
+![h:300](./images/Landing_Responsive.png)
 
 ---
 
@@ -71,12 +71,22 @@ Mockup con figma:
 - Account:
     - Client:
     - Server:
+
+---
+
+## Sockets/Rest API
+
 - Matchmaking:
     - Client:
         - emit('requestMatch'): Richiesta partita PVP
         - emit('requestMatchWithBot'): Richiesta partita PVE
     - Server:
         - emit('matchFound', { matchId: string }): Notifica partita trovata
+
+---
+
+## Sockets/Rest API
+
 - Match:
     - Client:
         - emit('getMatch'): Richiesta stato partita
@@ -127,4 +137,3 @@ Considerate le Euristiche di Nielsen:
 - Replay history partite
 - Pagina guida per l'utente
 
----
