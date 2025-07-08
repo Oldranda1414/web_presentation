@@ -22,22 +22,109 @@ Leonardo Randacio
 
 ---
 
-<!-- _class: invert lead -->
-<!-- _paginate: false -->
 
-# Capitolo
+Piattaforma per gioco competitivo da 2 giocatori 
 
 ---
 
-<!-- _paginate: hold -->
+## Funzionalità:
 
-## Slide con cose
+- Creazione account
+- Partita PVP
+- Partita PVE
+- Visualizzare classifica
 
 ---
 
-<!-- _paginate: hold -->
+## Design:
 
-## Slide con cose
+- Mockup
+- Tech stack MEVN
+- Sockets/REST API
 
-cose che compaiono
+---
 
+## Mockup
+
+Mockup con figma:
+
+![landing](./images/Landing.png)
+![landing resp](./images/Landing_Responsive.png)
+
+---
+
+## Tech Stack
+
+- MongoDB come database
+- Express per il backend
+- Vue per il frontend
+- Typescript
+- MDBootstrap
+- Prolog per AI
+- Jest per test backend
+- Docker per containerizzazione e deployment
+
+---
+
+## Sockets/Rest API
+
+- Account:
+    - Client:
+    - Server:
+- Matchmaking:
+    - Client:
+        - emit('requestMatch'): Richiesta partita PVP
+        - emit('requestMatchWithBot'): Richiesta partita PVE
+    - Server:
+        - emit('matchFound', { matchId: string }): Notifica partita trovata
+- Match:
+    - Client:
+        - emit('getMatch'): Richiesta stato partita
+        - emit('addMove'): Invia mossa
+        - emit('matchHistory', <username>): Richiesta cronologia partite
+    - Server:
+        - emit('move'): Notifica mossa eseguita
+        - emit('over'): Notifica partita finita
+
+---
+
+## Sockets/Rest API
+
+- Namespaces per determinare accesso a 'endpoint'
+- Rooms per giocatori in partita
+- Middleware per auth
+
+---
+
+
+## Ux
+
+Considerate le Euristiche di Nielsen:
+
+- Pro:
+    - Stile coerente
+    - Linguaggio standardizzato
+    - Tutorial Sandpiles
+    - Navigabilità buona
+- Contro:
+    - Documentazione su utilizzo sito scarna
+
+---
+
+## Dettagli
+
+- Cookies per autologin
+- Matchmaking
+- Salt e hash password in DB
+- Responsive Design
+
+---
+
+## Idee per il futuro
+
+- Username non univoci
+- Cronometro per le partite
+- Replay history partite
+- Pagina guida per l'utente
+
+---
