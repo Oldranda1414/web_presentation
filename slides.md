@@ -87,7 +87,7 @@ Mockup con figma:
     - POST `/logout`: invalida l'access token dell'utente
       - cookie: cookieId per il token salvato nel server
       - response: 200, 401 - expired or invalid token
-    - POST `/me`: restituisce i dati utente (username + email)
+    - GET `/me`: restituisce i dati utente (username + email)
       - cookie: cookieId per il token salvato nel server
       - response: 200, 401 - expired or invalid token
     - emit('changeEmail'): cambia la mail dell'utente
