@@ -76,9 +76,22 @@ Mockup con figma:
 
 ## Sockets/Rest API
 
+- Tutte le api sono sotto il subdomain `/account`
 - Account:
-    - Client:
-    - Server:
+    - POST `/register`: registra un nuovo account
+      - body: username, email, password
+      - response: 201, 400 - invalid input, 409 - account exists, 500
+    - POST `/login`: consente l'accesso ad un utente già registrato
+      - body: username, password
+      - response: 200 - salva il cookie, 409, 500
+    - POST `/logout`: invalida l'access token dell'utente
+      - cookie: cookieId per il token salvato nel server
+      - response: 200, 401 - expired or invalid token
+    - POST `/me`: restituisce i dati utente (username + email)
+      - cookie: cookieId per il token salvato nel server
+      - response: 200, 401 - expired or invalid token
+    - emit('changeEmail'): cambia la mail dell'utente
+    - emit('deleteAccount'): elimina l'account
 
 ---
 
