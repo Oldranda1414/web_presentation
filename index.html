@@ -61,10 +61,35 @@ Leonardo Randacio</p>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-class="invert" data-theme="gaia" lang="C" class="invert" data-marpit-pagination="8" style="--paginate:true;--class:invert;--theme:gaia;" data-marpit-pagination-total="14">
 <h2 id="socketsrest-api">Sockets/Rest API</h2>
 <ul>
+<li>Tutte le api sono sotto il subdomain <code>/account</code></li>
 <li>Account:
 <ul>
-<li>Client:</li>
-<li>Server:</li>
+<li>POST <code>/register</code>: registra un nuovo account
+<ul>
+<li>body: username, email, password</li>
+<li>response: 201, 400 - invalid input, 409 - account exists, 500</li>
+</ul>
+</li>
+<li>POST <code>/login</code>: consente l'accesso ad un utente già registrato
+<ul>
+<li>body: username, password</li>
+<li>response: 200 - salva il cookie, 409, 500</li>
+</ul>
+</li>
+<li>POST <code>/logout</code>: invalida l'access token dell'utente
+<ul>
+<li>cookie: cookieId per il token salvato nel server</li>
+<li>response: 200, 401 - expired or invalid token</li>
+</ul>
+</li>
+<li>POST <code>/me</code>: restituisce i dati utente (username + email)
+<ul>
+<li>cookie: cookieId per il token salvato nel server</li>
+<li>response: 200, 401 - expired or invalid token</li>
+</ul>
+</li>
+<li>emit('changeEmail'): cambia la mail dell'utente</li>
+<li>emit('deleteAccount'): elimina l'account</li>
 </ul>
 </li>
 </ul>
