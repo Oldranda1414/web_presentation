@@ -103,7 +103,7 @@ Mockup con figma:
     - Client:
         - `emit('getMatch')`: Richiesta stato partita
         - `emit('addMove')`: Invia mossa
-        - `emit('matchHistory',` <username>): Richiesta cronologia partite
+        - `emit('matchHistory', <username>)`: Richiesta cronologia partite
     - Server:
         - `emit('move')`: Notifica mossa eseguita
         - `emit('over')`: Notifica partita finita
