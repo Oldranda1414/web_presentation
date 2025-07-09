@@ -82,7 +82,7 @@ Mockup con figma:
     - POST `/login`: consente l'accesso ad un utente già registrato
     - POST `/logout`: invalida l'access token dell'utente
     - GET `/me`: restituisce i dati utente (estratti dal token)
-    - emit('deleteAccount'): elimina l'account
+    - `emit('deleteAccount')`: elimina l'account
 
 ---
 
@@ -90,10 +90,10 @@ Mockup con figma:
 
 - Matchmaking:
     - Client:
-        - emit('requestMatch'): Richiesta partita PVP
-        - emit('requestMatchWithBot'): Richiesta partita PVE
+        - `emit('requestMatch')`: Richiesta partita PVP
+        - `emit('requestMatchWithBot')`: Richiesta partita PVE
     - Server:
-        - emit('matchFound', { matchId: string }): Notifica partita trovata
+        - `emit('matchFound', { matchId: string })`: Notifica partita trovata
 
 ---
 
@@ -101,12 +101,12 @@ Mockup con figma:
 
 - Match:
     - Client:
-        - emit('getMatch'): Richiesta stato partita
-        - emit('addMove'): Invia mossa
-        - emit('matchHistory', <username>): Richiesta cronologia partite
+        - `emit('getMatch')`: Richiesta stato partita
+        - `emit('addMove')`: Invia mossa
+        - `emit('matchHistory',` <username>): Richiesta cronologia partite
     - Server:
-        - emit('move'): Notifica mossa eseguita
-        - emit('over'): Notifica partita finita
+        - `emit('move')`: Notifica mossa eseguita
+        - `emit('over')`: Notifica partita finita
 
 ---
 

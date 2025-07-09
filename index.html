@@ -68,7 +68,7 @@ Leonardo Randacio</p>
 <li>POST <code>/login</code>: consente l'accesso ad un utente già registrato</li>
 <li>POST <code>/logout</code>: invalida l'access token dell'utente</li>
 <li>GET <code>/me</code>: restituisce i dati utente (estratti dal token)</li>
-<li>emit('deleteAccount'): elimina l'account</li>
+<li><code>emit('deleteAccount')</code>: elimina l'account</li>
 </ul>
 </li>
 </ul>
@@ -80,13 +80,13 @@ Leonardo Randacio</p>
 <ul>
 <li>Client:
 <ul>
-<li>emit('requestMatch'): Richiesta partita PVP</li>
-<li>emit('requestMatchWithBot'): Richiesta partita PVE</li>
+<li><code>emit('requestMatch')</code>: Richiesta partita PVP</li>
+<li><code>emit('requestMatchWithBot')</code>: Richiesta partita PVE</li>
 </ul>
 </li>
 <li>Server:
 <ul>
-<li>emit('matchFound', { matchId: string }): Notifica partita trovata</li>
+<li><code>emit('matchFound', { matchId: string })</code>: Notifica partita trovata</li>
 </ul>
 </li>
 </ul>
@@ -100,15 +100,15 @@ Leonardo Randacio</p>
 <ul>
 <li>Client:
 <ul>
-<li>emit('getMatch'): Richiesta stato partita</li>
-<li>emit('addMove'): Invia mossa</li>
-<li>emit('matchHistory', &lt;username&gt;): Richiesta cronologia partite</li>
+<li><code>emit('getMatch')</code>: Richiesta stato partita</li>
+<li><code>emit('addMove')</code>: Invia mossa</li>
+<li><code>emit('matchHistory',</code> &lt;username&gt;): Richiesta cronologia partite</li>
 </ul>
 </li>
 <li>Server:
 <ul>
-<li>emit('move'): Notifica mossa eseguita</li>
-<li>emit('over'): Notifica partita finita</li>
+<li><code>emit('move')</code>: Notifica mossa eseguita</li>
+<li><code>emit('over')</code>: Notifica partita finita</li>
 </ul>
 </li>
 </ul>
