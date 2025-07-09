@@ -66,10 +66,11 @@ Mockup con figma:
 - Express per il backend
 - Vue per il frontend
 - Typescript
+- Scss
 - MDBootstrap
-- Prolog per AI
 - Jest per test backend
 - Docker per containerizzazione e deployment
+- Prolog per AI
 
 ---
 
