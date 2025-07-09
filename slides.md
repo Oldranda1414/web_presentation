@@ -125,6 +125,7 @@ Considerate le Euristiche di Nielsen:
     - Tutorial Sandpiles
     - Navigabilità buona
 - Contro:
+    - Un solo modo per fare le cose
     - Documentazione su utilizzo sito scarna
 
 ---
