@@ -64,31 +64,10 @@ Leonardo Randacio</p>
 <li>Tutte le api sono sotto il subdomain <code>/account</code></li>
 <li>Account:
 <ul>
-<li>POST <code>/register</code>: registra un nuovo account
-<ul>
-<li>body: username, email, password</li>
-<li>response: 201, 400 - invalid input, 409 - account exists, 500</li>
-</ul>
-</li>
-<li>POST <code>/login</code>: consente l'accesso ad un utente già registrato
-<ul>
-<li>body: username, password</li>
-<li>response: 200 - salva il cookie, 409, 500</li>
-</ul>
-</li>
-<li>POST <code>/logout</code>: invalida l'access token dell'utente
-<ul>
-<li>cookie: cookieId per il token salvato nel server</li>
-<li>response: 200, 401 - expired or invalid token</li>
-</ul>
-</li>
-<li>GET <code>/me</code>: restituisce i dati utente (username + email)
-<ul>
-<li>cookie: cookieId per il token salvato nel server</li>
-<li>response: 200, 401 - expired or invalid token</li>
-</ul>
-</li>
-<li>emit('changeEmail'): cambia la mail dell'utente</li>
+<li>POST <code>/register</code>: registra un nuovo account</li>
+<li>POST <code>/login</code>: consente l'accesso ad un utente già registrato</li>
+<li>POST <code>/logout</code>: invalida l'access token dell'utente</li>
+<li>GET <code>/me</code>: restituisce i dati utente (estratti dal token)</li>
 <li>emit('deleteAccount'): elimina l'account</li>
 </ul>
 </li>
